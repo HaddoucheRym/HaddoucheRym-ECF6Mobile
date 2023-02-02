@@ -50,10 +50,6 @@ public class LocataireServiceImpl implements LocataireService{
         return this.locataireRepository.findByName(name);
     }
 
-    @Override
-    public List<Locataire> findByUsername(String username) {
-        return this.locataireRepository.findByUsername(username);
-    }
 
     @Override
     public List<Locataire> findByEmail(String email) {

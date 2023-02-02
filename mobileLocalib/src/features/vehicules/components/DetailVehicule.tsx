@@ -51,7 +51,7 @@ const DetailVehicule = () => {
           />
           {veh?.disponibilite === "Disponible" ?
             <NavLink to={'/ajoutLocation/' + veh?.id} >
-              <IonButton >Ajouter</IonButton>
+              <IonButton >Louer</IonButton>
             </NavLink> : <p>{veh?.disponibilite}</p>
           }
         </IonContent>

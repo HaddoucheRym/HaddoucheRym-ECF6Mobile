@@ -59,4 +59,4 @@ export class LocationService {
     }
 }
 
-export const locationService = Object.freeze(new LocationService())
+export const locationService = new LocationService()

@@ -60,7 +60,7 @@ const LocatairePage = () => {
                 </IonHeader>
                 <LocataireList locataires={locataires} modifiedLocataire={modifiedLocataire} deleteLocataires={deleteLocataires} />
                 <NavLink to="/ajoutLocataire" >
-                    <IonButton >Ajouter</IonButton>
+                    <IonButton >Nouveau Locataire</IonButton>
                 </NavLink>
             </IonContent>
         </IonPage>

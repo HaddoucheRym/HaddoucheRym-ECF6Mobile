@@ -57,16 +57,18 @@ const EditeLocation = (props: EditeLocationProps) => {
      * Fonction pour modifier la marque du vehicule
      * @param event string, marque du vehicule à modifier
      */
-    const handleChangeVehiculeMarque = (event: any) => {
-        setLoc({ ...loc, vehicule: event.target.value, })
-    }
+    // const handleChangeVehiculeMarque = (event: any) => {
+    //     setLoc({ ...loc, vehicule: event.target.value, })
+    // }
 
     /**
      * Fonction pour modifier la date du debut de location
      * @param event Date, date debut de location à modifier
      */
     const handleChangeDateD = (event: any) => {
-        setLoc({ ...loc, dateDebut: event.target.value, })
+        let date1 = event.target.value
+        date1 = date1.substring(0, 10);
+        setLoc({ ...loc, dateDebut: date1 })
     }
 
     /**
@@ -74,7 +76,9 @@ const EditeLocation = (props: EditeLocationProps) => {
      * @param event Date, date fin de location à modifier
      */
     const handleChangeDateF = (event: any) => {
-        setLoc({ ...loc, dateFin: event.target.value, })
+        let date = event.target.value
+        date = date.substring(0, 10);
+        setLoc({ ...loc, dateFin: date })
     }
 
     /**
@@ -82,41 +86,37 @@ const EditeLocation = (props: EditeLocationProps) => {
      * @param event number, prix total à modifier
      */
     const handleChangePrixT = (event: any) => {
-
         setLoc({ ...loc, prixt: event.target.value, })
     }
 
     return (
         <>
-            <IonList>
+            {/* <IonList>
                 <IonItem>
                     <IonSelect placeholder="choisir la marque du vehicule" multiple={true} onIonChange={(event: any) =>
                         handleChangeVehiculeMarque(event)}>
                         {vehicules.map((vehicule: VehiculeType, index: number) => (
-                            <IonSelectOption key={index} value={vehicule.marque}>{vehicule.marque}
+                            <IonSelectOption key={index} value={loc.vehicule}>{vehicule.marque}
                             </IonSelectOption>
                         ))}
                     </IonSelect>
                 </IonItem>
-            </IonList>
+            </IonList> */}
             <IonItem counter={true} counterFormatter={(inputLength, maxLength) => `${maxLength - inputLength} characters remaining`}>
                 <IonLabel position="floating">la date de debut du location</IonLabel>
-                <IonDatetime presentation="date" value={props.location.dateDebut} onIonChange={(event: any) =>
-                    handleChangeDateD(event)}></IonDatetime>;
-                {/* <IonInput type='date' maxlength={150} value={props.location.dateDebut} onIonChange={(event: any) =>
-                    handleChangeDateD(event)}></IonInput> */}
+                <IonDatetime presentation="date" value={loc.dateDebut} onIonChange={(event: any) =>
+                    handleChangeDateD(event)}></IonDatetime>
             </IonItem>
             <IonItem counter={true} counterFormatter={(inputLength, maxLength) => `${maxLength - inputLength} characters remaining`}>
                 <IonLabel position="floating">la date de fin du location</IonLabel>
-                <IonDatetime presentation="date" value={props.location.dateFin} onIonChange={(event: any) =>
-                    handleChangeDateF(event)}></IonDatetime>;
-                {/* <IonInput type='text' maxlength={150}  onIonChange={(event: any) =>
-                    handleChangeDateF(event)}></IonInput> */}
+                <IonDatetime presentation="date" value={loc.dateFin} onIonChange={(event: any) =>
+                    handleChangeDateF(event)}></IonDatetime>
             </IonItem>
             <IonItem counter={true} counterFormatter={(inputLength, maxLength) => `${maxLength - inputLength} characters remaining`}>
                 <IonLabel position="floating">la prix totale du location</IonLabel>
-                <IonInput type='text' maxlength={150} value={props.location.prixt} onIonChange={(event: any) =>
-                    handleChangePrixT(event)}></IonInput>
+                {/* <IonInput type='text' maxlength={150} value={props.location.prixt} onIonChange={(event: any) =>
+                    handleChangePrixT(event)}></IonInput> */}
+                <p>{props.location.prixt}</p>
             </IonItem>
 
             <IonButton color="success" onClick={() => modifLoca()}>Valider</IonButton>

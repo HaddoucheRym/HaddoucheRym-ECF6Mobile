@@ -62,7 +62,7 @@ const VehiculePage = () => {
                     </IonHeader>
                     <VehiculeListe vehicules={vehicules} modifiedVehicule={modifiedVehicule} deleteVehicule={deleteVehicule} />
                     <NavLink to="/ajoutVehicule" >
-                        <IonButton >Ajouter</IonButton>
+                        <IonButton >Nouveau vehicule</IonButton>
                     </NavLink>
                 </IonContent>
             </IonPage>

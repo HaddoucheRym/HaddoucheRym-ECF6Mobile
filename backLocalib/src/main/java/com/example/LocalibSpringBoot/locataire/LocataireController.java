@@ -43,11 +43,6 @@ public class LocataireController {
         return this.locataireService.findByName(name);
     }
 
-    @GetMapping("username/{username}")
-    public List<Locataire> findByUsername(@PathVariable String username) {
-        return this.locataireService.findByUsername(username);
-    }
-
     @GetMapping("email/{email}")
     public List<Locataire> findByEmail(@PathVariable String email) {
         return this.locataireService.findByEmail(email);

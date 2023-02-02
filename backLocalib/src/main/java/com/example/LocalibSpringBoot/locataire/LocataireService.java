@@ -45,13 +45,6 @@ public interface LocataireService {
     List<Locataire> findByName(String name);
 
     /**
-     * methode qui permet de trouver des locataires par username
-     * @param username String, surnom des locataires recherchées
-     * @return List<Locataire>
-     */
-    List<Locataire> findByUsername(String username);
-
-    /**
      * methode qui permet de trouver des locataires par email
      * @param email String, email des locataires recherchées
      * @return List<Locataire>

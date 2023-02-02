@@ -8,7 +8,7 @@ const Home: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Blank</IonTitle>
+          <IonTitle>Application Localib </IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
@@ -17,8 +17,9 @@ const Home: React.FC = () => {
             <IonTitle size="large">Blank</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <img alt="Silhouette of mountains" src={localib} />
-        <p> Bienvenu chez nous </p>
+        <img className='imgHome' alt="Silhouette of mountains" src={localib} />
+        <p className='pHome'> Bienvenu chez Localib </p>
+
       </IonContent>
     </IonPage>
   );

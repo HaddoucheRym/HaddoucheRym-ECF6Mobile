@@ -11,12 +11,10 @@ const AddLocataire = () => {
     const [newPer, setNewPer] = useState<LocataireType>({
         id: uuid(),
         name: "",
-        username: "",
         date: "",
         email: "",
         phone: "",
         age: 0
-
     })
 
     /**
@@ -98,21 +96,21 @@ const AddLocataire = () => {
                 </IonHeader>
                 <IonContent fullscreen>
                     <IonItem counter={true}>
-                        <IonLabel position="floating">Nom de la personne</IonLabel>
+                        <IonLabel position="floating">Nom Prenom :</IonLabel>
                         <IonInput type='text' maxlength={20} value={newPer.name} onIonChange={(event: any) => handleChangeNom(event)}></IonInput>
                     </IonItem>
                     <IonItem counter={true} counterFormatter={(inputLength, maxLength) => `${maxLength - inputLength} characters remaining`}>
-                        <IonLabel position="floating">la date de la personne</IonLabel>
+                        <IonLabel position="floating">la date de naissance : </IonLabel>
                         <IonDatetime presentation="date" value={newPer.date} onIonChange={(event: any) =>
-                            handleChangeDate(event)}></IonDatetime>;
+                            handleChangeDate(event)}></IonDatetime>
                     </IonItem>
                     <IonItem counter={true} counterFormatter={(inputLength, maxLength) => `${maxLength - inputLength} characters remaining`}>
-                        <IonLabel position="floating">l'email de la personne</IonLabel>
+                        <IonLabel position="floating"> Email :</IonLabel>
                         <IonInput type='text' maxlength={150} value={newPer.email} onIonChange={(event: any) =>
                             handleChangeEmail(event)}></IonInput>
                     </IonItem>
                     <IonItem counter={true} counterFormatter={(inputLength, maxLength) => `${maxLength - inputLength} characters remaining`}>
-                        <IonLabel position="floating">le telephone de la personne</IonLabel>
+                        <IonLabel position="floating"> Telephone :</IonLabel>
                         <IonInput type='text' maxlength={150} value={newPer.phone} onIonChange={(event: any) =>
                             handleChangeTelephone(event)}></IonInput>
                     </IonItem>
