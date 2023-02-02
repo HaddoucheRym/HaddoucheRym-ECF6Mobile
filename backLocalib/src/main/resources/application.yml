@@ -1,0 +1,13 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+      jackson:
+        serialization.write_dates_as_timestamps: false
+
+logging:
+  level:
+    org: WARN
+    fr: TRACE
+
+
