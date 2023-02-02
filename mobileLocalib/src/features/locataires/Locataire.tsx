@@ -23,10 +23,10 @@ const Locataire = (props: LocataireProps) => {
     return (
         <>
             <Card titre={props.locataire.name}
-                titre2={props.locataire.email}
+                titre2={"Email : " + props.locataire.email}
                 nom="locataire" id={props.locataire.id}
                 fonction={suprimerLocataire} fonction2={props.handleClickEdit}
-                children={props.locataire.date} />
+                children={"Date de naissance : " + props.locataire.date} />
         </>
     )
 }

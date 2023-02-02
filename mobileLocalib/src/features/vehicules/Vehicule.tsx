@@ -21,12 +21,12 @@ const Vehicule = (props: VehiculeProps) => {
 
     return (
         <>
-            <Card titre={props.vehicule.marque}
+            <Card titre={"Marque: " + props.vehicule.marque}
                 nom="vehicule"
-                titre2={props.vehicule.model}
+                titre2={"Model : " + props.vehicule.model}
                 id={props.vehicule.id} fonction={suprimerVehicule}
                 fonction2={props.handleClickEdit}
-                children={props.vehicule.prix} />
+                children={"Le prix : " + props.vehicule.prix} />
         </>
     )
 }

@@ -4,7 +4,8 @@ export type LocataireType = {
     id: string,
     name: string,
     username: string,
-    date: string,
+    date: any,
     email: string,
-    phone: string
+    phone: string,
+    age: number
 }

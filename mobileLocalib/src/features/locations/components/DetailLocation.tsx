@@ -37,14 +37,14 @@ const DetailLocation = () => {
           </IonToolbar>
         </IonHeader>
         <IonContent fullscreen>
-          <CardDetail titre={loc?.locataire.name}
-            sousTitre={loc?.vehicule.marque}
+          <CardDetail titre={"Locataire : " + loc?.locataire.name}
+            sousTitre={"Vehicule : " + loc?.vehicule.marque + " " + loc?.vehicule.model}
             source={voiture}
-            children={loc?.prixt}
-            children2={loc?.dateDebut}
-            children3={loc?.dateFin}
-            children4={loc?.vehicule.model}
-            children5={loc?.vehicule.typeVehicule} />
+            children={"Le prix totale : " + loc?.prixt}
+            children2={"Type du vehicule : " + loc?.vehicule.typeVehicule}
+            children3={"Immatriculation : " + loc?.vehicule.immatriculation}
+            children4={"Date de debut : " + loc?.dateDebut}
+            children5={"Date de fin : " + loc?.dateFin} />
         </IonContent>
       </IonPage>
     </>

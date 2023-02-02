@@ -36,18 +36,18 @@ const DetailVehicule = () => {
             <IonButtons slot="start">
               <IonBackButton defaultHref="/vehicules"></IonBackButton>
             </IonButtons>
-            <IonTitle>Profil</IonTitle>
+            <IonTitle>Detail du vehicule</IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonContent fullscreen>
-          <CardDetail titre={veh?.marque}
-            sousTitre={veh?.model}
+          <CardDetail titre={"Marque : " + veh?.marque}
+            sousTitre={"Model : " +veh?.model}
             source={voiture}
-            children={veh?.etat}
-            children2={veh?.immatriculation}
-            children3={veh?.disponibilite}
-            children4={veh?.typeVehicule}
-            children5={veh?.prix}
+            children={"Etat : " + veh?.etat}
+            children2={"Immatriculation : " + veh?.immatriculation}
+            children3={"Disponibilité : " + veh?.disponibilite}
+            children4={"Type de vehicule : " +veh?.typeVehicule}
+            children5={"Le prix est : " +veh?.prix}
           />
           {veh?.disponibilite === "Disponible" ?
             <NavLink to={'/ajoutLocation/' + veh?.id} >

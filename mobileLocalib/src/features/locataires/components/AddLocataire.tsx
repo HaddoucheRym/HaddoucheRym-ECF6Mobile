@@ -1,4 +1,4 @@
-import { IonBackButton, IonButton, IonButtons, IonContent, IonHeader, IonInput, IonItem, IonLabel, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonBackButton, IonButton, IonButtons, IonContent, IonDatetime, IonHeader, IonInput, IonItem, IonLabel, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import React, { useEffect, useState } from 'react'
 import { NavLink, useParams } from 'react-router-dom';
 import { LocataireType } from '../locataire.type';
@@ -14,7 +14,8 @@ const AddLocataire = () => {
         username: "",
         date: "",
         email: "",
-        phone: ""
+        phone: "",
+        age: 0
 
     })
 
@@ -56,7 +57,9 @@ const AddLocataire = () => {
      * @param event Date, date de naissance du locataire à ajouter
      */
     const handleChangeDate = (event: any) => {
-        setNewPer({ ...newPer, date: event.target.value, })
+        let date2 = event.target.value
+        date2 = date2.substring(0, 10);
+        setNewPer({ ...newPer, date: date2 })
     }
 
     /**
@@ -98,25 +101,21 @@ const AddLocataire = () => {
                         <IonLabel position="floating">Nom de la personne</IonLabel>
                         <IonInput type='text' maxlength={20} value={newPer.name} onIonChange={(event: any) => handleChangeNom(event)}></IonInput>
                     </IonItem>
-
                     <IonItem counter={true} counterFormatter={(inputLength, maxLength) => `${maxLength - inputLength} characters remaining`}>
                         <IonLabel position="floating">la date de la personne</IonLabel>
-                        <IonInput type='text' maxlength={150} value={newPer.date} onIonChange={(event: any) =>
-                            handleChangeDate(event)}></IonInput>
+                        <IonDatetime presentation="date" value={newPer.date} onIonChange={(event: any) =>
+                            handleChangeDate(event)}></IonDatetime>;
                     </IonItem>
-
                     <IonItem counter={true} counterFormatter={(inputLength, maxLength) => `${maxLength - inputLength} characters remaining`}>
                         <IonLabel position="floating">l'email de la personne</IonLabel>
                         <IonInput type='text' maxlength={150} value={newPer.email} onIonChange={(event: any) =>
                             handleChangeEmail(event)}></IonInput>
                     </IonItem>
-
                     <IonItem counter={true} counterFormatter={(inputLength, maxLength) => `${maxLength - inputLength} characters remaining`}>
                         <IonLabel position="floating">le telephone de la personne</IonLabel>
                         <IonInput type='text' maxlength={150} value={newPer.phone} onIonChange={(event: any) =>
                             handleChangeTelephone(event)}></IonInput>
                     </IonItem>
-
                     <NavLink to="/locataires">
                         <IonButton onClick={handleClickSave}>Ajouter</IonButton>
                     </NavLink>

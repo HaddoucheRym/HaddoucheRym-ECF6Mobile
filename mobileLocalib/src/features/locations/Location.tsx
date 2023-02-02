@@ -22,12 +22,12 @@ const Location = (props: LocationProps) => {
 
   return (
     <>
-            <Card titre={props.location.locataire.name}
+            <Card titre={"Nom : " + props.location.locataire.name}
             nom="location" id={props.location.id}
             fonction={suprimerLocation}
             fonction2={props.handleClickEdit}
-            titre2={props.location.vehicule.marque }
-            children={props.location.prixt}
+            titre2={"Vehicule : " + props.location.vehicule.marque }
+            children={"Le prix : " + props.location.prixt}
             />
         </>
   )

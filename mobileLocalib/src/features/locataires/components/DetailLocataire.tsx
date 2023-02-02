@@ -39,11 +39,11 @@ const DetailLocataire = () => {
         </IonHeader>
         <IonContent fullscreen>
           <CardDetail titre={personne?.name}
-            sousTitre={personne?.date}
-            children={personne?.email}
-            children2={personne?.phone}
+            sousTitre={"Date de naissance : " + personne?.date}
+            children={"Email : " + personne?.email}
+            children2={"Telephone : " + personne?.phone}
             source={profil}
-            children3=""
+            children3={"Age : " + personne?.age}
             children4=""
             children5="" />
         </IonContent>

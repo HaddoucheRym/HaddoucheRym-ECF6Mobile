@@ -21,7 +21,7 @@ const AddLocation = () => {
     const [selectedVehiculeIdV, setSelectedVehiculeIdV] = useState(id);
     const [newLocation, setNewLocation] = useState<LocationType>({
         id: uuid(),
-        locataire: { id: "", name: "", username: "", email: "", date: "", phone: "" },
+        locataire: { id: "", name: "", username: "", email: "", date: "", phone: "", age:0 },
         vehicule: { id: "", marque: "", model: "", immatriculation: "", etat: "", prix: 0, typeVehicule: "", image: "", disponibilite: "" },
         dateDebut: "",
         dateFin: "",
