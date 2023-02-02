@@ -1,0 +1,189 @@
+{
+  "locataires": [
+    {
+      "id": 2,
+      "nom": "Ervin Howellow",
+      "username": "Antonette",
+      "date": "12/05/1988",
+      "email": "Shanna@melissa.tv",
+      "telephone": "010-692-6593 x09125"
+    },
+    {
+      "id": 3,
+      "nom": "Clementine Bauch",
+      "username": "Samantha",
+      "date": "12/05/1989",
+      "email": "Nathan@yesenia.net",
+      "telephone": "1-463-123-4447"
+    },
+    {
+      "id": 4,
+      "nom": "Patricia Lebsack",
+      "username": "Karianne",
+      "date": "12/05/1989",
+      "email": "Julianne.OConner@kory.org",
+      "telephone": "493-170-9623 x156"
+    },
+    {
+      "id": 5,
+      "nom": "Chelsey Dietrich",
+      "username": "Kamren",
+      "date": "12/05/1989",
+      "email": "Lucio_Hettinger@annie.ca",
+      "telephone": "(254)954-1289"
+    },
+    {
+      "id": 6,
+      "nom": "Mrs. Dennis Schulist",
+      "username": "Leopoldo_Corkery",
+      "date": "12/05/1989",
+      "email": "Karley_Dach@jasper.info",
+      "telephone": "1-477-935-8478 x6430"
+    },
+    {
+      "id": 7,
+      "nom": "Kurtis Weissnat",
+      "username": "Elwyn.Skiles",
+      "date": "12/05/1989",
+      "email": "Telly.Hoeger@billy.biz",
+      "telephone": "(775)976-6794 x41206"
+    },
+    {
+      "id": 8,
+      "nom": "Nicholas Runolfsdottir V",
+      "username": "Maxime_Nienow",
+      "date": "12/05/1989",
+      "email": "Sherwood@rosamond.me",
+      "telephone": "586.493.6943 x140"
+    },
+    {
+      "id": 9,
+      "nom": "Glenna Reichert",
+      "username": "Delphine",
+      "date": "12/05/1989",
+      "email": "Chaim_McDermott@dana.io",
+      "telephone": "(775)976-6794 x41206"
+    },
+    {
+      "id": 10,
+      "nom": "Clementina DuBuque",
+      "username": "Moriah.Stanton",
+      "date": "12/05/1989",
+      "email": "Rey.Padberg@karina.biz",
+      "telephone": "024-648-3804"
+    },
+    {
+      "id": 11,
+      "nom": "zerzer",
+      "username": "",
+      "date": "05/07/2000",
+      "email": "hhf@gmail.com",
+      "telephone": "0123654"
+    }
+  ],
+  "vehicules": [
+    {
+      "id": 2,
+      "marque": "citroen",
+      "model": "C4",
+      "immatriculation": "156_ABK",
+      "etat": "B",
+      "prix": 35.66,
+      "disponibilite": "Pas disponible",
+      "typeVehicule": "voiture",
+      "image": "./asset/voiture.jpeg"
+    },
+    {
+      "id": 3,
+      "marque": "mercedes",
+      "model": "benz GLC",
+      "immatriculation": "124gfdfgfd",
+      "etat": "A",
+      "prix": 2589.25,
+      "disponibilite": "Disponible",
+      "typeVehicule": "voiture",
+      "image": "./asset/voiture.jpeg"
+    },
+    {
+      "id": 4,
+      "marque": "Reneaut",
+      "model": "Megan",
+      "immatriculation": "158-ggert",
+      "etat": "A",
+      "prix": 85.25,
+      "disponibilite": "Disponible",
+      "typeVehicule": "Voiture",
+      "image": "./asset/voiture.jpeg"
+    },
+    {
+      "id": 6,
+      "marque": "Audi",
+      "model": "A6",
+      "immatriculation": "158_gdt",
+      "etat": "A",
+      "prix": 25.36,
+      "disponibilite": "Disponible",
+      "typeVehicule": "Voiture",
+      "image": "./asset/voiture.jpeg"
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "locataire": "Leanne Grahame",
+      "vehiculeMarque": "audi",
+      "vehiculeModel": "a6",
+      "dateDebut": "2023-01-10T11:46:00+01:00",
+      "dateFin": "2023-01-25T11:47:00+01:00",
+      "prixTotal": 675
+    },
+    {
+      "id": 2,
+      "locataire": "Nicholas Runolfsdottir V",
+      "vehiculeMarque": "Reneaut",
+      "vehiculeModel": "Megan",
+      "dateDebut": "2023-01-26T11:47:00+01:00",
+      "dateFin": "2023-01-31T11:47:00+01:00",
+      "prixTotal": 170.5
+    },
+    {
+      "id": 3,
+      "locataire": "Clementine Bauch",
+      "vehiculeMarque": [
+        "mercedes"
+      ],
+      "vehiculeModel": [
+        "benz GLC"
+      ],
+      "dateDebut": "2023-02-01T16:18:00+01:00",
+      "dateFin": "2023-02-08T16:18:00+01:00",
+      "prixTotal": 18124.75
+    },
+    {
+      "id": 4,
+      "locataire": "Chelsey Dietrich",
+      "vehiculeMarque": [
+        "Reneaut"
+      ],
+      "vehiculeModel": [
+        "Megan"
+      ],
+      "dateDebut": "2023-02-09T16:20:00+01:00",
+      "dateFin": "2023-02-09T16:20:00+01:00",
+      "prixTotal": 0
+    },
+    {
+      "id": 5,
+      "locataire": "Ervin Howellow",
+      "vehiculeMarque": [
+        "Reneaut"
+      ],
+      "vehiculeModel": [
+        "Megan"
+      ],
+      "dateDebut": "2023-02-01T16:25:00+01:00",
+      "dateFin": "2023-02-03T16:25:00+01:00",
+      "prixTotal": 170.5
+    }
+  ]
+}
