@@ -11,39 +11,24 @@ export type VehiculeProps = {
 }
 
 const Vehicule = (props: VehiculeProps) => {
+
+    /**
+     * Fonction qui utilise les props pour supprimer un vehicule
+     */
     const suprimerVehicule = () => {
         props.suprrimeVehicule(props.vehicule.id)
     }
 
-  return (
-    <>
-    
-    {/* <IonCard>
-                <IonCardHeader>
-                    <IonCardTitle>{props.vehicule.marque}</IonCardTitle>
-                    {/* <IonCardSubtitle>Card Subtitle</IonCardSubtitle> 
-                </IonCardHeader>
-
-                <IonCardContent>
-                    {props.vehicule.model}
-                </IonCardContent>
-                <Link to={'/vehicule/' + props.vehicule.id} >
-                    <IonButton color="secondary">Detail</IonButton>
-                    </Link>
-               
-                <IonButton color="danger" onClick={() => suprimerVehicule()}>X</IonButton>
-                <IonButton color="success" onClick={() => props.handleClickEdit(props.vehicule.id)}>Modifier</IonButton>
-            </IonCard> */}
-
+    return (
+        <>
             <Card titre={props.vehicule.marque}
-             nom="vehicule"
-            titre2={props.vehicule.model}
-             id={props.vehicule.id} fonction={suprimerVehicule}
-            fonction2={props.handleClickEdit}
-            children={props.vehicule.prix} />
-        
-    </>
-  )
+                nom="vehicule"
+                titre2={props.vehicule.model}
+                id={props.vehicule.id} fonction={suprimerVehicule}
+                fonction2={props.handleClickEdit}
+                children={props.vehicule.prix} />
+        </>
+    )
 }
 
 export default Vehicule

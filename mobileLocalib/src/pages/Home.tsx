@@ -1,6 +1,7 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+
 import './Home.css';
+import  localib  from '../assets/localib.png'
 
 const Home: React.FC = () => {
   return (
@@ -16,7 +17,8 @@ const Home: React.FC = () => {
             <IonTitle size="large">Blank</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer />
+        <img alt="Silhouette of mountains" src={localib} />
+        <p> Bienvenu chez nous </p>
       </IonContent>
     </IonPage>
   );

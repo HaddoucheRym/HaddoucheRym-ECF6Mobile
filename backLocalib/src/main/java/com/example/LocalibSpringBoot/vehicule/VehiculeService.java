@@ -19,6 +19,8 @@ public interface VehiculeService {
      */
     Vehicule save(Vehicule entity);
 
+    Vehicule update(Vehicule entity, String id);
+
     /**
      * Retourne un vehicule en fonction de son id
      * si aucun vehicule ne posséde cet id, retourne automatiquement un status 404

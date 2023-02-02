@@ -12,28 +12,25 @@ const DetailVehicule = () => {
   const [veh, setVeh] = useState<VehiculeType>()
   const { id } = useParams<any>();
   const [selectedVehId, setSelectedVehId] = useState(id);
-  
+
+  /**
+   * Mise à jour et recuperation des données d'un vehicule
+   */
   useEffect(() => {
     trouveVehicule()
     // console.log(veh?.marque);
   }, [selectedVehId])
 
+  /**
+   * Fonction qui appelle le service vehicule pour recuperer les données d'un vehicule
+   */
   const trouveVehicule = (): void => {
     vehiculeService.findVehicule(selectedVehId).then(data => setVeh(data))
-    // console.log(selectedVehId);
-    
-    // console.log(veh?.marque);
-    
-    
   }
 
-
-
-  
-  
   return (
     <>
-    <IonPage>
+      <IonPage>
         <IonHeader>
           <IonToolbar>
             <IonButtons slot="start">
@@ -43,36 +40,21 @@ const DetailVehicule = () => {
           </IonToolbar>
         </IonHeader>
         <IonContent fullscreen>
-          {/* <IonCard>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-            <IonCardHeader>
-              <IonCardTitle>{veh?.marque}</IonCardTitle>
-              <IonCardSubtitle>{veh?.model}</IonCardSubtitle>
-            </IonCardHeader>
-            <IonCardContent>
-              {veh?.etat} <br />
-              {veh?.prix}
-              {veh?.immatriculation} <br />
-              {veh?.disponibilite} <br />
-              {veh?.typeVehicule}
-            </IonCardContent>
-          </IonCard> */}
           <CardDetail titre={veh?.marque}
-          sousTitre={veh?.model}
-          source={voiture}
-          children={veh?.etat}
-          children2={veh?.immatriculation}
-          children3={veh?.disponibilite}
-          children4={veh?.typeVehicule}
-          children5={veh?.prix}
+            sousTitre={veh?.model}
+            source={voiture}
+            children={veh?.etat}
+            children2={veh?.immatriculation}
+            children3={veh?.disponibilite}
+            children4={veh?.typeVehicule}
+            children5={veh?.prix}
           />
-          {veh?.disponibilite === "Disponible"?
-          <NavLink to={'/ajoutLocation/' + veh?.id} >
-            <IonButton >Ajouter</IonButton>
-        </NavLink>: <p>{veh?.disponibilite}</p>
-}
+          {veh?.disponibilite === "Disponible" ?
+            <NavLink to={'/ajoutLocation/' + veh?.id} >
+              <IonButton >Ajouter</IonButton>
+            </NavLink> : <p>{veh?.disponibilite}</p>
+          }
         </IonContent>
-
       </IonPage>
     </>
   )

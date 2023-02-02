@@ -1,5 +1,7 @@
 package com.example.LocalibSpringBoot.locataire;
 
+import com.example.LocalibSpringBoot.vehicule.Vehicule;
+
 import java.util.List;
 
 public interface LocataireService {
@@ -20,6 +22,7 @@ public interface LocataireService {
      */
     Locataire save(Locataire entity);
 
+    Locataire update(Locataire entity, String id);
     /**
      * Retourne un locataire en fonction de son id
      * si aucun locataire ne posséde cet id, retourne automatiquement un status 404

@@ -25,6 +25,12 @@ import './theme/variables.css';
 import VehiculePage from './features/vehicules/pages/VehiculePage';
 import DetailVehicule from './features/vehicules/components/DetailVehicule';
 import AddVehicule from './features/vehicules/components/AddVehicule';
+import LocatairePage from './features/locataires/pages/LocatairePage';
+import DetailLocataire from './features/locataires/components/DetailLocataire';
+import AddLocataire from './features/locataires/components/AddLocataire';
+import LocationPage from './features/locations/pages/LocationPage';
+import AddLocation from './features/locations/components/AddLocation';
+import DetailLocation from './features/locations/components/DetailLocation';
 
 setupIonicReact();
 
@@ -43,13 +49,26 @@ const App: React.FC = () => (
         <Route path="/vehicules" component={VehiculePage} />
         <Route path="/vehicule/:id" component={DetailVehicule} />
         <Route path="/ajoutVehicule" component={AddVehicule} />
+        <Route path="/locataires" component={LocatairePage} />
+        <Route path="/locataire/:id" component={DetailLocataire} />
+        <Route path="/ajoutLocataire" component={AddLocataire} />
+        <Route path="/locations" component={LocationPage} />
+        <Route path="/ajoutLocation/:id" component={AddLocation} />
+        <Route path="/location/:id" component={DetailLocation} />
       </IonRouterOutlet>
       <IonTabBar slot="bottom">
             <IonTabButton tab="/vehicules" href="/vehicules">
               <IonIcon icon={carSportOutline} />
               <IonLabel>Vehicules</IonLabel>
             </IonTabButton>
-            
+            <IonTabButton tab="locataires" href="/locataires">
+              <IonIcon icon={personCircle} />
+              <IonLabel>Locataires</IonLabel>
+            </IonTabButton>
+            <IonTabButton tab="locations" href="/locations">
+              <IonIcon icon={newspaperOutline} />
+              <IonLabel>Locations</IonLabel>
+            </IonTabButton>
           </IonTabBar>
         </IonTabs>
       </IonPage>

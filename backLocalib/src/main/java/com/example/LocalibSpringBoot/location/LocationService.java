@@ -22,6 +22,7 @@ public interface LocationService {
      */
     Location save(Location entity);
 
+    Location update(Location entity, String id);
     /**
      * Retourne une location en fonction de son id
      * si aucune location ne posséde cet id, retourne automatiquement un status 404

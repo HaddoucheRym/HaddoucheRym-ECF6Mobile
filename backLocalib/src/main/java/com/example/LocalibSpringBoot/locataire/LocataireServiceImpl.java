@@ -65,4 +65,9 @@ public class LocataireServiceImpl implements LocataireService{
     public List<Locataire> findByPhone(String phone) {
         return this.locataireRepository.findByPhone(phone);
     }
+
+    @Override
+    public Locataire update(Locataire entity, String id) {
+        return this.locataireRepository.save(entity);
+    }
 }

@@ -5,35 +5,39 @@ import Vehicule from '../Vehicule'
 import { VehiculeType } from '../vehicule.type'
 
 export type VehiculeListProps = {
-    vehicules : VehiculeType[],
+    vehicules: VehiculeType[],
     modifiedVehicule: Function,
     deleteVehicule: Function
 }
 
 const VehiculeListe = (props: VehiculeListProps) => {
-    const [selectId, setSelectId] = useState<number>();
+    const [selectId, setSelectId] = useState<any>();
 
-    const modifierVehicule =(vehicule: VehiculeType) => {
+    /**
+     * Fonction qui utilise les props pour modifier un vehicule
+     * @param vehicule VehiculeType, le vehicule à modifier
+     */
+    const modifierVehicule = (vehicule: VehiculeType) => {
         props.modifiedVehicule(vehicule)
         setSelectId(0)
     }
-    
-  return (
-    <>
-     {props.vehicules && props.vehicules.map((vehicule: VehiculeType,
-index: number) => {
-    if (vehicule.id === selectId) {
-        return <EditeVehicule vehicule={vehicule}
-        key={index} modifVehicule={modifierVehicule} />
-    } else {
-        return <Vehicule key={index} 
-        vehicule={vehicule} 
-        suprrimeVehicule={props.deleteVehicule}
-        handleClickEdit={setSelectId} />
-    }
-})}
-    </>
-  )
+
+    return (
+        <>
+            {props.vehicules && props.vehicules.map((vehicule: VehiculeType,
+                index: number) => {
+                if (vehicule.id === selectId) {
+                    return <EditeVehicule vehicule={vehicule}
+                        key={index} modifVehicule={modifierVehicule} />
+                } else {
+                    return <Vehicule key={index}
+                        vehicule={vehicule}
+                        suprrimeVehicule={props.deleteVehicule}
+                        handleClickEdit={setSelectId} />
+                }
+            })}
+        </>
+    )
 }
 
 export default VehiculeListe

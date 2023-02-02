@@ -79,4 +79,9 @@ public class VehiculeController {
     public List<Vehicule> findAllVehiculePrixLessThan(@RequestParam double prix) {
         return this.vehiculeService.findAllVehiculePrixLessThan(prix);
     }
+
+    @PutMapping("{id}")
+    public Vehicule updateVehicul(@PathVariable String id, @RequestBody Vehicule vehicule) {
+        return this.vehiculeService.update(vehicule, id);
+    }
 }

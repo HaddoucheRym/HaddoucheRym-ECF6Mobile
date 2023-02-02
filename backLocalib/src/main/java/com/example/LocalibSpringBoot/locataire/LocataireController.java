@@ -1,5 +1,6 @@
 package com.example.LocalibSpringBoot.locataire;
 
+import com.example.LocalibSpringBoot.vehicule.Vehicule;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -24,6 +25,8 @@ public class LocataireController {
     public Locataire save(@RequestBody Locataire entity) {
         return this.locataireService.save(entity);
     }
+
+
 
     @GetMapping("{id}")
     public Locataire findById(@PathVariable String id) {
@@ -53,5 +56,10 @@ public class LocataireController {
     @GetMapping("phone/{phone}")
     public List<Locataire> findByPhone(@PathVariable String phone) {
         return this.locataireService.findByPhone(phone);
+    }
+
+    @PutMapping("{id}")
+    public Locataire updateLocataire(@PathVariable String id, @RequestBody Locataire locataire) {
+        return this.locataireService.update(locataire, id);
     }
 }

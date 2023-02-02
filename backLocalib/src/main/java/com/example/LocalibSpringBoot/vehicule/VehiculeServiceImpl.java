@@ -28,6 +28,7 @@ public class VehiculeServiceImpl implements VehiculeService{
     }
 
 
+
     @Override
     public Vehicule findById(String id) {
         return this.vehiculeRepository.findById(id).orElseThrow(() ->{
@@ -75,5 +76,10 @@ public class VehiculeServiceImpl implements VehiculeService{
     @Override
     public List<Vehicule> findAllVehiculePrixLessThan(double prix) {
         return this.vehiculeRepository.findAllVehiculePrixLessThan(prix);
+    }
+
+    @Override
+    public Vehicule update(Vehicule entity, String id) {
+        return this.vehiculeRepository.save(entity);
     }
 }

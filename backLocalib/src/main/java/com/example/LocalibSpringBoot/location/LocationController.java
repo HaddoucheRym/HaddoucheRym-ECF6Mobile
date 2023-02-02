@@ -1,5 +1,6 @@
 package com.example.LocalibSpringBoot.location;
 
+import com.example.LocalibSpringBoot.locataire.Locataire;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -33,5 +34,10 @@ public class LocationController {
     @DeleteMapping("{id}")
     public void deleteById(@PathVariable String id) {
         this.locationService.deleteById(id);
+    }
+
+    @PutMapping("{id}")
+    public Location updateLocation(@PathVariable String id, @RequestBody Location location) {
+        return this.locationService.update(location, id);
     }
 }

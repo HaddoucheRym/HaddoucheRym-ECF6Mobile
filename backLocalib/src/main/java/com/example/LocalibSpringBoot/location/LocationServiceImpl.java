@@ -63,4 +63,8 @@ public class LocationServiceImpl implements LocationService{
         this.locationRepository.deleteById(id);
     }
 
+    @Override
+    public Location update(Location entity, String id) {
+        return this.locationRepository.save(entity);
+    }
 }
