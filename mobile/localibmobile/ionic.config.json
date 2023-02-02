@@ -1,0 +1,7 @@
+{
+  "name": "localibmobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
