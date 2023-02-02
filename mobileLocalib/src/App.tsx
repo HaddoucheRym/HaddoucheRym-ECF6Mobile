@@ -1,7 +1,8 @@
 import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
+import { IonApp, IonIcon, IonLabel, IonPage, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
+import { personCircle,newspaperOutline, carSportOutline } from 'ionicons/icons'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -21,12 +22,17 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import VehiculePage from './features/vehicules/pages/VehiculePage';
+import DetailVehicule from './features/vehicules/components/DetailVehicule';
+import AddVehicule from './features/vehicules/components/AddVehicule';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
+    <IonPage id="main">
+        <IonTabs>
       <IonRouterOutlet>
         <Route exact path="/home">
           <Home />
@@ -34,7 +40,19 @@ const App: React.FC = () => (
         <Route exact path="/">
           <Redirect to="/home" />
         </Route>
+        <Route path="/vehicules" component={VehiculePage} />
+        <Route path="/vehicule/:id" component={DetailVehicule} />
+        <Route path="/ajoutVehicule" component={AddVehicule} />
       </IonRouterOutlet>
+      <IonTabBar slot="bottom">
+            <IonTabButton tab="/vehicules" href="/vehicules">
+              <IonIcon icon={carSportOutline} />
+              <IonLabel>Vehicules</IonLabel>
+            </IonTabButton>
+            
+          </IonTabBar>
+        </IonTabs>
+      </IonPage>
     </IonReactRouter>
   </IonApp>
 );
